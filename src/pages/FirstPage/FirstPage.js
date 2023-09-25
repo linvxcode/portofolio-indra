@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useTheme } from "../../Darkmode/ThemeContext";
@@ -59,6 +59,7 @@ const FirstPage = () => {
                 Information Technology, S1
               </motion.h2>
               <motion.div
+              className="relative z-[999]"
                 initial={{ translateY: 100, opacity: 0 }}
                 animate={{ translateY: 0, opacity: 1 }}
                 transition={{
@@ -70,6 +71,9 @@ const FirstPage = () => {
                   color="primary"
                   variant="shadow"
                   className="mt-5 max-md:relative max-md:z-[999]"
+                  as={Link}
+                  href="https://www.youtube.com/@IndraMaulanaideos"
+                  target="__blank"
                 >
                   Get Started
                 </Button>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Card, CardHeader } from "@nextui-org/react";
+import { Button, Card, CardHeader, Link } from "@nextui-org/react";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
@@ -117,7 +117,7 @@ export default function TriplePage() {
               delay: 0.4,
             }}
           >
-            <Button color="primary" className="mt-5">
+            <Button color="primary" className="mt-5" as={Link} href="https://www.youtube.com/watch?v=DNNRvX_28ks&t=450s" target="__blank">
               Get Started
             </Button>
           </motion.div>

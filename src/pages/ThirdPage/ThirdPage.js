@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -32,6 +32,7 @@ const ThirdPage = () => {
             Ability to create and design colors in various products or digital art
           </motion.h2>
           <motion.div
+          className="relative z-[999]"
             initial={{ translateY: 50, opacity: 0 }}
             viewport={{ once: true }}
             whileInView={{ translateY: 0, opacity: 1 }}
@@ -40,7 +41,7 @@ const ThirdPage = () => {
               delay: 0.4,
             }}
           >
-            <Button color="primary" className="mt-5">
+            <Button color="primary" className="mt-5" as={Link} href="https://www.behance.net/Indramaulaagung" target="__blank">
               Get Started
             </Button>
           </motion.div>

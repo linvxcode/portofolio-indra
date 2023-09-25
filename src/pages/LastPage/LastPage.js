@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Inter } from "next/font/google";
 import {
   Card,
   CardHeader,
   Image,
   Button,
-  useDisclosure,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
+  Link,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
 
@@ -21,29 +16,34 @@ const LastPage = () => {
     {
       id: 1,
       header: "Portofolio Web",
+      src: "https://portofolio-438b.vercel.app/",
       content:
         "The following is a portfolio web slicing that I created using React JS",
     },
     {
       id: 2,
       header: "Illustratiosn Web",
+      src: "https://slicing-landing-page-seven.vercel.app/",
       content:
         "The following is a web slicing Illustration portfolio that I made using React JS",
     },
     {
       id: 3,
       header: "Portofolio",
+      src: "#",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .",
     },
     {
       id: 4,
       header: "Motion Graphic",
+      src: "#",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .",
     },
     {
       id: 5,
+      src: "#",
       header: "Motion Graphic",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .",
@@ -51,16 +51,11 @@ const LastPage = () => {
     {
       id: 6,
       header: "Motion Graphic",
+      src: "#",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .",
     },
   ];
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [selected, setSelected] = useState(null);
-  const handleOpen = (card) => {
-    setSelected(card);
-    onOpen();
-  };
   return (
     <div className="p-44 max-md:p-12 max-md:mt-[100px] max-lg:p-12  h-auto mb-5">
       <div>
@@ -90,7 +85,9 @@ const LastPage = () => {
           {cardList.map((item) => (
             <Button
               key={item.id}
-              onPress={() => handleOpen(item)}
+              as={Link}
+              href={item.src}
+              target="__blank"
               className=" w-[100%] h-[100%] bg-transparent flex flex-row whitespace-normal "
             >
               <Card
@@ -142,23 +139,6 @@ const LastPage = () => {
               </Card>
             </Button>
           ))}
-          <Modal isOpen={isOpen} onClose={onClose} backdrop="opaque" placement="center">
-            <ModalContent>
-            {selected && (
-                <>
-                  <ModalHeader className="flex flex-col gap-1">{selected.header}</ModalHeader>
-                  <ModalBody>
-                    <p>{selected.content}</p>
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="danger" variant="light" onClick={onClose}>
-                      Close
-                    </Button>
-                  </ModalFooter>
-                </>
-              )}
-            </ModalContent>
-          </Modal>
         </div>
       </div>
     </div>

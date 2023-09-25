@@ -1,6 +1,6 @@
 import React from "react";
 import { Inter } from "next/font/google";
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
 import CardSecondPage from "../component/CardSecondPage";
 import CardRectangle from "../component/CardRectangle";
@@ -66,7 +66,7 @@ const SecondPage = () => {
                   delay: 0.4,
                 }}
               >
-                <Button color="primary" className="mt-5">
+                <Button color="primary" className="mt-5" as={Link} href="https://www.instagram.com/ideosprocess/" target="__blank">
                   Get Started
                 </Button>
               </motion.div>
