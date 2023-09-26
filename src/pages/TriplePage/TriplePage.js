@@ -23,7 +23,7 @@ export default function TriplePage() {
             style={{width: 'auto' , height: 'auto'}}
           />
         </div>
-        <motion.div className="max-md:w-[100%] overflow-hidden">
+        <motion.div className="max-md:w-[100%] overflow-hidden flex-1">
           <motion.div
             initial={{ translateX: 100, opacity: 0 }}
             viewport={{ once: true }}

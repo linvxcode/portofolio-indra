@@ -15,7 +15,7 @@ const FirstPage = () => {
       <div className="h-screen">
         <div className="grid grid-cols-2 max-md:grid-cols-1 ">
           <div className="p-44 md:pr-0 max-[1170px]:p-[1rem] max-[1170px]:mt-40">
-            <div className="max-md:absolute max-md:top-[350px] max-md:mt-20 w-[90%]">
+            <div className="max-md:absolute max-md:top-[290px] max-md:mt-20 w-[90%]">
               <motion.h1
                 className={`${
                   inter.className
@@ -59,7 +59,7 @@ const FirstPage = () => {
                 Information Technology, S1
               </motion.h2>
               <motion.div
-              className="relative z-[999]"
+                className="relative z-[999] flex gap-5 sm:items-center max-sm:flex-col"
                 initial={{ translateY: 100, opacity: 0 }}
                 animate={{ translateY: 0, opacity: 1 }}
                 transition={{
@@ -70,18 +70,48 @@ const FirstPage = () => {
                 <Button
                   color="primary"
                   variant="shadow"
-                  className="mt-5 max-md:relative max-md:z-[999]"
+                  radius="full"
+                  className="mt-5 max-md:relative max-md:z-[999] h-[45px]"
                   as={Link}
                   href="https://www.youtube.com/@IndraMaulanaideos"
                   target="__blank"
                 >
                   Get Started
                 </Button>
+                {/* <div> */}
+
+                <Button
+                  color="default"
+                  variant="bordered"
+                  radius="full"
+                  className="sm:mt-5 w-auto max-md:relative max-md:z-[999] h-[48px]"
+                  as={Link}
+                  href="https://github.com/indramaulanaagung"
+                  target="__blank"
+                >
+                  <svg
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    aria-hidden="true"
+                    focusable="false"
+                    tabIndex="-1"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+                      fill="currentColor"
+                      fillRule="evenodd"
+                    ></path>
+                  </svg>
+                  Github
+                </Button>
+                {/* </div> */}
               </motion.div>
             </div>
           </div>
 
-          <div className="mt-20 max-md:mt-[-50px]  overflow-hidden flex justify-end">
+          <div className="mt-20 max-md:mt-[-90px]  overflow-hidden flex justify-end">
             <motion.div
               initial={{ translateY: 100, opacity: 0 }}
               animate={{ translateY: 0, opacity: 1 }}
